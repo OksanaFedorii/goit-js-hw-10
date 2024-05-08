@@ -1,0 +1,24 @@
+.form {
+    margin-top: 30px;
+}
+
+.fieldset {
+    max-width: 230px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.btn {
+width: 260px;
+}
+
+p a {
+    text-decoration: none;
+    color: #0066ff;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
