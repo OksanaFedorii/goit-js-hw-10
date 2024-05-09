@@ -1,4 +1,6 @@
 import "flatpickr/dist/flatpickr.min.css";
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 function convertMs(ms) {
     const second = 1000;
@@ -38,7 +40,12 @@ function handleDateSelection(date) {
     const datetimePicker = document.querySelector('#datetime-picker');
 
     if (date <= now) {
-        window.alert("Please choose a date in the future");
+        iziToast.error({
+            title: 'Error',
+            message: `❌ Plase choose a data in the future`,
+            position: 'topRight',
+            timeout: 5000
+        });
         startButton.disabled = true;
     } else {
         startButton.disabled = false;
